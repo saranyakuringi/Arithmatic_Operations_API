@@ -2,6 +2,7 @@ package router
 
 import (
 	"Basic_ArithematicOperations/Server/Arithematic"
+	numeric "Basic_ArithematicOperations/Server/Numeric"
 	operations "Basic_ArithematicOperations/Server/Operations"
 	recursivedef "Basic_ArithematicOperations/Server/Recursivedef"
 
@@ -18,5 +19,6 @@ func Router() {
 	router.GET("/Average", operations.GET_Average)
 	router.GET("/MinMax", operations.GET_MinMax)
 	router.GET("/Recursive", recursivedef.GET_Recursive)
+	router.GET("/EvenOdd", numeric.GET_EvenOdd)
 	router.Run("localhost:8089")
 }
